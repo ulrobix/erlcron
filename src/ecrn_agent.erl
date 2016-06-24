@@ -45,7 +45,7 @@
 
 %% @doc
 %% Starts the server with the apropriate job and the appropriate ref
--spec start_link/2 ::(erlcron:job_ref(), erlcron:job()) ->
+-spec start_link(erlcron:job_ref(), erlcron:job()) ->
                              ignore | {error, Reason::term()} | {ok, pid()}.
 start_link(JobRef, Job) ->
     gen_server:start_link(?MODULE, [JobRef, Job], []).
